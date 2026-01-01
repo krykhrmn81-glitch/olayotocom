@@ -15,12 +15,25 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(150deg, #ffffff 0%, #4F959D 100%);
+            background-attachment: fixed;
+            background-size: cover;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(150deg, #ffffff 0%, #4F959D 100%);
+            z-index: -1;
         }
 
         .container {
